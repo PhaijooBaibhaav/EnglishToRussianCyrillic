@@ -1,7 +1,7 @@
 /*
  * From html
  */
-let text = document.getElementById("input").value;
+let text = document.getElementById("input");
 let output = document.getElementById("output"); 
 
 /*
@@ -64,7 +64,7 @@ function transliterate(text) {
 }
 input.addEventListener("input", function() {
 
-    output.textContent = transliterate(input.value);
+    output.value = transliterate(input.value);
 
 });
 
