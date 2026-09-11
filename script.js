@@ -1,23 +1,42 @@
 /*
  * From html
  */
-let text = doucment.getElementById("input").value;
-let output = doucment.getElementById("output").value; 
+let text = document.getElementById("input").value;
+let output = document.getElementById("output"); 
 
+/*
+ * Made In js 
+*/
+const soft = "'";
+const hard = '"';
 
 function replace(text, search, replacement) {
     return text.split(search).join(replacement);
 }
 
 const map = {
+
+
+    kh: "х",
+    ts: "ц",
+    ch: "ч",
+    shch: "щ",
+    sh: "ш",
+    ye: "е", 
+    yo: "ё",
+    ya: "я", 
+    yu: "ю",
+    zh: "ж",
+
+    [soft]: "ь",
+    [hard]: "ъ",
+
     a: "а",
     b: "б",
     v: "в",
     g: "г",
     d: "д",
-    e: "е",
-    yo: "ё",
-    zh: "ж",
+    e: "э", 
     z: "з",
     i: "и",
     y: "й",
@@ -31,18 +50,21 @@ const map = {
     s: "с",
     t: "т",
     u: "у",
-    f: "ф",
-    kh: "х",
-    ts: "ц",
-    ch: "ч",
-    sh: "ш",
-    shch: "щ"
+    f: "ф"
 };
 
 function transliterate(text) {
-    for (let i = 0; i < map.length; i++)
-        text = replace(text, map[i][0], map[i][1]);
+    let keys = Object.keys(map);
+
+    for (let i = 0; i < keys.length; i++) {
+
+        text = replace(text, keys[i], map[keys[i]]);
+    }
+    return text;
 }
-return text;
-}
+input.addEventListener("input", function() {
+
+    output.textContent = transliterate(input.value);
+
+});
 
