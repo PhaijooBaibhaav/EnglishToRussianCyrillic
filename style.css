@@ -1,0 +1,34 @@
+body {
+    color: white;
+    background-color: #0F172A;
+}
+
+.input {
+    font-size: 1.8em;
+    border-radius: 10px;
+    border-color: #38BDF8;
+    border-width: 2px;
+    border-width: 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.output {
+    font-size: 1.8em;
+    border-radius: 10px;
+    border-color: #38BDF8;
+    border-width: 10px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.guideText {
+    font-size: 2em;
+    color: green;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.title {
+
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+
+}
