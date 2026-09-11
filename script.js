@@ -19,8 +19,8 @@ const map = {
 
     kh: "х",
     ts: "ц",
-    ch: "ч",
     shch: "щ",
+    ch: "ч",
     sh: "ш",
     ye: "е", 
     yo: "ё",
